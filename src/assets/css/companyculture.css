@@ -153,6 +153,11 @@
   bottom: 34.5%;
 }
 
+/* 移动端文化卡片 - 默认隐藏 */
+.culture-mobile-list {
+  display: none;
+}
+
 
 
 /* Tablet */
@@ -179,7 +184,8 @@
     flex-direction: column;
   }
   .company-culture-title { font-size: 20px; }
-  .company-culture-badge, .company-culture-title, .company-culture-image { order: 1; }
+  .company-culture-badge { order: 1; align-self: center; width: auto; }
+  .company-culture-title, .company-culture-image { order: 1; }
   .culture-mobile-list { order: 2; }
   .company-culture-content { order: 3; }
 

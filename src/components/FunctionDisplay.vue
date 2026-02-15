@@ -84,7 +84,6 @@
       <div
         class="function-tab"
         :class="{ active: activeTab === 'simulator' }"
-        @click="activeTab = 'simulator'"
       >
         <img
           src="../assets/images/FunctionDisplay/Slice 142@2x (4).png"
