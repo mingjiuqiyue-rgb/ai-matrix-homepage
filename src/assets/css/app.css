@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+#app {
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+@media screen and (max-width: 1024px) {
+    #app {
+        padding-top: 88px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #app {
+        padding-top: 48px;
+    }
+}
+
+/* Global modal styles - teleported to body, outside scoped styles */
+.modal-overlay,
+.function-modal-overlay,
+.reach-out-modal-overlay,
+.work-together-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-content,
+.function-modal-content,
+.reach-out-modal-content,
+.work-together-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-image,
+.function-modal-image,
+.reach-out-modal-image,
+.work-together-modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.modal-close-icon,
+.function-modal-close-icon,
+.reach-out-modal-close-icon,
+.work-together-modal-close-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 140px;
+    right: 40px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.modal-close-icon:hover,
+.function-modal-close-icon:hover,
+.reach-out-modal-close-icon:hover,
+.work-together-modal-close-icon:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,142 @@
+.company-profile {
+  width: 1200px;
+  height: 860px;
+  margin: 160px auto 0;
+  text-align: center;
+  position: relative;
+}
+
+.company-profile-badge { display: inline-flex; padding: 12px 16px; align-items: center; gap: 8px; border-radius: 44px; border: 2px solid rgba(255, 255, 255, 0.2); background: rgba(0, 0, 0, 0.4); }
+.company-profile-badge .badge-text { color: #FFFFFF; font-family: 'PingFang SC'; font-size: 16px; font-weight: 900; }
+.company-profile-title { color: #FFFFFF; font-family: 'PingFang SC'; font-size: 36px; font-weight: 900; margin: 30px 0 0; }
+.company-profile-image { max-width: 481px; width: 100%; height: auto; margin-top: 22px; display: block; margin-left: auto; margin-right: auto; }
+.company-profile-content { width: 1200px; height: 643px; position: absolute; bottom: 0; left: 0; }
+.profile-left-image { position: absolute; left: 0; bottom: 1px; width: 584px; height: 642px; display: block; }
+
+.profile-bottom-box {
+  position: absolute; bottom: 0; right: 0; width: 990px; height: 156px;
+  background-image: url('../images/CompanyProfile/Slice\ 8@2x.png');
+  background-size: 990px 156px; background-position: center; background-repeat: no-repeat;
+  z-index: 2; display: flex; align-items: center;
+}
+
+.bottom-box-item { height: 84px; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+.bottom-box-left { width: 114px; margin-left: 184px; }
+.bottom-box-middle { width: 96px; margin-left: 200px; }
+.bottom-box-right { width: 96px; margin-left: auto; margin-right: 98px; }
+.bottom-box-content { display: flex; align-items: center; }
+.bottom-box-number { color: #ffffff; font-family: "PingFang SC"; font-size: 40px; font-weight: 900; }
+.bottom-box-plus { color: #ffffff; font-family: "PingFang SC"; font-size: 16px; font-weight: 900; margin-left: 8px; }
+.bottom-box-label { color: #ffffff; font-family: "PingFang SC"; font-size: 16px; font-weight: 900; white-space: nowrap; }
+
+.profile-right-box { position: absolute; top: 0; left: 640px; width: 526px; height: 431px; text-align: left; }
+.profile-right-title { font-family: "PingFang SC"; font-size: 32px; font-weight: 900; background: linear-gradient(180deg, #65E2FE 0%, #7B84FF 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; text-align: left; }
+.profile-right-subtitle { color: #ffffff; font-family: "PingFang SC"; font-size: 32px; font-weight: 900; margin: 12px 0 0 0; text-align: left; }
+.profile-right-text { width: 526px; color: #ffffff; font-family: "PingFang SC"; font-size: 20px; font-weight: 400; line-height: 30px; margin: 0; text-align: left; }
+.profile-right-text:first-of-type { margin-top: 48px; }
+.profile-right-text:not(:first-of-type) { margin-top: 20px; }
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .company-profile { width: 100%; height: auto; margin: 60px auto 0; padding: 0 16px; box-sizing: border-box; }
+  
+  .company-profile-title { 
+    font-size: 26px; 
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  .company-profile-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d2ff, transparent);
+    box-shadow: 0 0 10px #00d2ff;
+  }
+
+  .company-profile-image { display: none; }
+
+  .company-profile-content { 
+    width: 100%; 
+    height: auto; 
+    position: relative; 
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 60px;
+  }
+  
+  .profile-left-image { 
+    position: relative; 
+    width: 42%; 
+    height: 260px; 
+    object-fit: cover;
+    margin: 0; 
+    left: auto; 
+    bottom: auto; 
+    display: block; 
+  }
+  
+  .profile-right-box { 
+    position: relative; 
+    left: auto; 
+    top: auto; 
+    width: 58%; 
+    height: auto; 
+    margin-top: 0;
+    padding: 15px 12px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .profile-right-title { font-size: 18px; }
+  .profile-right-subtitle { font-size: 18px; margin-top: 4px; }
+  .profile-right-text { width: 100%; font-size: 11px; line-height: 1.6; color: #ccc; }
+  .profile-right-text:first-of-type { margin-top: 15px; }
+  .profile-right-text:not(:first-of-type) { margin-top: 10px; }
+
+  .profile-bottom-box { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    height: 60px; 
+    padding: 0;
+    box-sizing: border-box; 
+    background: linear-gradient(90deg, #6297ef 0%, #68d8f7 100%) !important;
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: space-evenly; 
+    align-items: center;
+    right: auto; 
+    border-radius: 0; 
+    margin-top: 0;
+    z-index: 5;
+  }
+  
+  .bottom-box-item { 
+    flex: 1;
+    height: 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .bottom-box-item:last-child { border-right: none; }
+
+  .bottom-box-content { justify-content: center; }
+  .bottom-box-number { font-size: 16px; font-weight: 900; }
+  .bottom-box-plus { font-size: 10px; margin-left: 2px; }
+  .bottom-box-label { font-size: 9px; margin-top: 2px; color: #fff; font-weight: normal; }
+}

@@ -1,0 +1,83 @@
+.reach-out {
+  width: 1200px;
+  height: 637px;
+  margin: 265px auto 0;
+  position: relative;
+  overflow: hidden;
+  background: #000000 url('../images/ReachOut/Slice\ 5@2x.png') no-repeat center center;
+  background-size: cover;
+}
+
+.reach-out-bg-img {
+  display: none;
+}
+
+.reach-out-content { position: relative; z-index: 3; width: 100%; height: 100%; }
+.reach-out-header { position: absolute; top: 104px; left: 64px; display: flex; gap: 88px; }
+.reach-out-header-text { color: #ffffff99; font-family: "PingFang SC"; font-size: 16px; font-weight: 900; }
+.reach-out-title { position: absolute; top: 172px; left: 64px; color: #ffffff; font-family: "PingFang SC"; font-size: 30px; font-weight: 900; margin: 0; }
+
+.reach-out-demo-btn {
+  position: absolute; top: 252px; left: 64px;
+  display: flex; width: 160px; height: 48px; align-items: center; justify-content: center; gap: 6px;
+  border-radius: 40px; background: linear-gradient(90deg, #0222f9 1.11%, #023dd9 61.11%, #8764ff 111.11%);
+  border: none; cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.reach-out-demo-btn:hover { opacity: 0.9; transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);}
+.reach-out-demo-text { color: #ffffff; font-family: "PingFang SC"; font-size: 20px; font-weight: 900; }
+.reach-out-demo-arrow { width: 32px; height: 32px; }
+.reach-out-icons { position: absolute; top: 513px; left: 64px; display: flex; gap: 28px; }
+.reach-out-icon { width: 62px; height: 62px; cursor: pointer; transition: transform 0.2s; }
+.reach-out-icon:hover { transform: scale(1.1); }
+
+.reach-out-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.reach-out-modal-content { position: relative; max-width: 90%; max-height: 90%; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.reach-out-modal-image { max-width: 100%; max-height: 80vh; object-fit: contain; }
+.reach-out-modal-close-icon { width: 40px; height: 40px; position: absolute; top: 140px; right: 40px; cursor: pointer; transition: opacity 0.3s ease; }
+.reach-out-modal-close-icon:hover { opacity: 0.8; }
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .reach-out {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    margin: 60px auto 0;
+    overflow: visible;
+    background: #000000 !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .reach-out-bg-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -200px;
+    position: relative;
+    z-index: 1;
+  }
+  .reach-out-content {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 40px;
+    z-index: 3;
+  }
+  .reach-out-header { display: none; }
+  .reach-out-header-text { font-size: 14px; }
+  .reach-out-title { position: relative; top: auto; left: auto; font-size: 26px; margin-top: 16px; text-align: center; }
+  .reach-out-demo-btn { display: none; }
+  .reach-out-demo-text { font-size: 18px; }
+  .reach-out-demo-arrow { width: 28px; height: 28px; }
+  .reach-out-icons { position: relative; top: auto; left: auto; margin-top: 32px; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .reach-out-icon { width: 48px; height: 48px; }
+}

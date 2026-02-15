@@ -1,0 +1,30 @@
+.cooperation-page {
+  width: 100%;
+  height: auto;
+  background: #000000;
+}
+
+/* 从下往上的淡入动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 为除第一个模块外的其他模块添加动画效果 */
+.cooperation-page > div:not(:first-child) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* 当模块进入视口时触发动画 */
+.cooperation-page > div:not(:first-child).animate {
+  opacity: 1;
+  transform: translateY(0);
+}

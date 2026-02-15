@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=1200, initial-scale=0.35, user-scalable=yes"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
+
+<script>
+  // 手机适配
+  if (window.innerWidth <= 1200) {
+    // 把所有区块显示出来
+    setTimeout(() => {
+      const sections = document.querySelectorAll(
+        ".hero-section, .function-display, .fingerprint-browser, .product-function, .product-highlights, .mutually-beneficial, .multiple-routes, .oneclick-booking, .reach-out, .recommend-effect, .work-together, .about-us, .channel-cooperation, .company-profile, .customer-success",
+      );
+      sections.forEach((el) => {
+        if (el) {
+          el.style.position = "relative";
+          el.style.top = "auto";
+          el.style.left = "auto";
+          el.style.marginTop = "50px";
+          el.style.marginBottom = "50px";
+          el.style.minHeight = "auto";
+          el.style.background = "#000";
+        }
+      });
+    }, 100);
+  }
+</script>

@@ -1,0 +1,87 @@
+.home-page {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+/* 从下往上的淡入动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 为除HeroSection外的其他模块添加动画效果 */
+.home-page > div:not(.hero-section) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* 当模块进入视口时触发动画 */
+.home-page > div:not(.hero-section).animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-bg-image {
+  position: absolute;
+  top: 682px;
+  left: 18.4%;
+  width: 1200px;
+  height: 3833px;
+  background-image: url("../images/public/Slice\ 45@2x.png");
+  background-size: 1200px 3833px;
+  background-position:center top;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+.mobile-section-tabs {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .home-bg-image {
+    display: none;
+  }
+
+  .mobile-section-tabs {
+    display: flex;
+    gap: 12px;
+    padding: 10px 12px;
+    margin: 8px auto 0;
+    border-radius: 8px;
+    background: rgba(16, 18, 30, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: fit-content;
+  }
+
+  .mobile-section-tabs .tab-item {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .mobile-section-tabs .tab-item.active {
+    background: linear-gradient(90deg, #5794F7 11.11%, #7E8AF7 61.11%, #A080F7 111.11%);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(87, 148, 247, 0.3);
+  }
+}
+

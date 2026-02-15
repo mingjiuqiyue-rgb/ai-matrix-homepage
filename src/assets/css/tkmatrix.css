@@ -1,0 +1,54 @@
+.tk-matrix { width: 1200px; height: 648px; margin: 0 auto; display: flex; gap: 16px; animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(30px); }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tk-left-box { width: 344px; height: 648px; background-image: url('../images/FunctionDisplay/Slice\ 139@2x.png'); background-size: 344px 648px; background-position: center; background-repeat: no-repeat; position: relative; border-radius: 20px; overflow: hidden; }
+.tk-step-item { position: absolute; left: 58px; display: flex; flex-direction: column; }
+.tk-step-item:nth-child(1) { top: 28px; left: 50px;}
+.tk-step-item:nth-child(2) { top: calc(28px + 20px + 8px + 22.4px + 155px); left: 50px;}
+.tk-step-item:nth-child(3) { top: calc(28px + 20px + 8px + 22.4px + 155px + 20px + 8px + 22.4px + 155px); left: 50px;}
+.tk-step-header { display: flex; align-items: center; gap: 8px; }
+.tk-step-label { font-family: "PingFang SC"; font-size: 20px; font-weight: 900; background: linear-gradient(180deg, #65E2FE 0%, #7B84FF 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.tk-step-title { font-family: "PingFang SC"; font-size: 20px; font-weight: 900; color: #FFF; }
+.tk-step-description { color: #d0d0d0; font-family: "Alibaba PuHuiTi"; font-size: 14px; font-weight: 400; line-height: 22.4px; letter-spacing: 0.42px; margin: 0; padding: 0; }
+
+.tk-right-box { width: 840px; height: 648px; background-image: url('../images/FunctionDisplay/Slice\ 140@2x.png'); background-size: 840px 648px; background-position: center; background-repeat: no-repeat; display: flex; flex-direction: column; align-items: center; position: relative; border-radius: 20px; overflow: hidden; }
+.tk-right-title { color: #ffffff; font-family: "PingFang SC"; font-size: 24px; font-weight: 900; margin: 24px 0 0 0; text-align: center; }
+.tk-video-container { width: 836px; height: 470px; margin-top: 23px; position: relative; }
+.tk-video { width: 836px; height: 470px; display: block; cursor: pointer; border-radius: 12px; }
+.tk-video::-webkit-media-controls { opacity: 1; transition: opacity 0.3s; }
+.tk-video.paused::-webkit-media-controls { opacity: 0; pointer-events: none; }
+.tk-video.seeking::-webkit-media-controls { opacity: 1 !important; pointer-events: auto !important; }
+.tk-play-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.2); cursor: pointer; }
+.tk-play-button { width: 70.55px; height: 70.55px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.play-icon { width: 0; height: 0; border-left: 28px solid rgba(0, 0, 0, 0.8); border-top: 17.5px solid transparent; border-bottom: 17.5px solid transparent; margin-left: 6px; }
+.tk-demo-btn { width: 128px; height: 48px; background: linear-gradient(90deg, #02229F 11.11%, #023DD9 61.11%, #7B61FF 111.11%); border: none; border-radius: 40px; cursor: pointer; position: absolute; bottom: 24px; right: 24px; transition: all 0.3s ease; transform: translateY(0); }
+.tk-demo-btn:hover { opacity: 0.9; transform: translateY(-3px); box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3); }
+.tk-demo-text { color: #FFFFFF; font-family: "PingFang SC"; font-size: 16px; font-weight: 900; }
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .tk-matrix { width: 100%; height: auto; padding: 0 16px; box-sizing: border-box; flex-direction: column-reverse; gap: 16px; }
+  .tk-left-box { width: 100%; height: auto; aspect-ratio: 344/648; background-size: cover; border-radius: 16px; overflow: hidden; }
+  .tk-step-item { left: 5%; }
+  .tk-step-label { font-size: 16px; }
+  .tk-step-title { font-size: 16px; }
+  .tk-step-description { font-size: 14px; }
+  .tk-right-box { width: 100%; height: auto; background-size: cover; padding-bottom: 20px; border-radius: 16px; overflow: hidden; }
+  .tk-video-container { width: 96%; height: auto; margin: 16px auto 0; border-radius: 8px; overflow: hidden; }
+  .tk-video { width: 100%; height: auto; border-radius: 8px; }
+  .tk-right-title { display: none; }
+  .tk-demo-btn { display: flex; align-items: center; justify-content: center; position: relative; bottom: auto; right: auto; margin: 20px auto 0; width: 100px; height: 36px; }
+  .tk-demo-text { font-size: 15px; }
+}

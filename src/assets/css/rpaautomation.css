@@ -1,0 +1,90 @@
+.rpa-automation { width: 1200px; margin: 0 auto; animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(30px); }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rpa-section-first { width: 1200px; height: 530px; background-image: url('../images/FunctionDisplay/Slice\ 136@2x.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+.rpa-first-title { position: absolute; top: 32px; left: 88px; color: #ffffff; text-shadow: 0 4px 4px #00000040; font-family: "PingFang SC"; font-size: 24px; font-weight: 900; }
+.rpa-first-description { position: absolute; top: 70px; left: 88px; width: 800px; color: #ffffffcc; text-shadow: 0 4px 4px #00000040; font-family: "PingFang SC"; font-size: 16px; font-weight: 400; text-align: left; }
+
+.rpa-section-second { width: 1200px; height: 431px; margin-top: 32px; display: flex; gap: 32px; }
+.rpa-left-box { width: 725px; height: 431px; background-image: url('../images/FunctionDisplay/Slice\ 137@2x.png'); background-size: 725px 431px; background-position: center; background-repeat: no-repeat; position: relative; }
+.rpa-left-item { position: absolute; display: flex; flex-direction: column; align-items: flex-start; }
+.rpa-left-item:first-child { top: 25px; left: 223px; }
+.rpa-left-item:last-child { top: 25px; right: 230px; }
+.rpa-left-label { color: #ffffff; font-family: "Alibaba PuHuiTi"; font-size: 15.53px; font-weight: 400; line-height: 24.85px; letter-spacing: 0.47px; text-transform: uppercase; opacity: 0.4; }
+.rpa-left-value { font-family: "PingFang SC"; font-size: 40px; font-weight: 900; background: linear-gradient(180deg, #65E2FE 0%, #7B84FF 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: 2px; }
+
+.rpa-right-container { width: 443px; height: 431px; display: flex; flex-direction: column; gap: 35px; }
+.rpa-right-top-box { width: 443px; height: 242px; background-image: url('../images/FunctionDisplay/Slice\ 137@2x\ \(1\).png'); background-size: 443px 242px; background-position: center; background-repeat: no-repeat; }
+.rpa-right-bottom-box { width: 443px; height: 154px; background-image: url('../images/FunctionDisplay/Slice\ 138@2x.png'); background-size: 443px 154px; background-position: center; background-repeat: no-repeat; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: opacity 0.3s ease; }
+.rpa-right-bottom-box:hover { opacity: 0.9; }
+.rpa-bottom-text { color: #ffffff; font-family: "PingFang SC"; font-size: 20px; font-weight: 900; margin-top: 10px; }
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .rpa-automation { width: 100%; padding: 0 16px; box-sizing: border-box; }
+  .rpa-section-first { width: 100%; height: auto; aspect-ratio: 1200/580; background-size: 100% 100%; position: relative; }
+  .rpa-first-title { position: absolute; top: 7%; left: 7%; font-size: clamp(12px, 4vw, 18px); }
+  .rpa-first-description { position: absolute; top: 18%; left: 7%; width: 85%; font-size: clamp(8px, 2.5vw, 12px); }
+  
+  .rpa-section-second { 
+    width: 100%; 
+    height: auto; 
+    display: flex;
+    flex-direction: column; 
+    gap: 12px; 
+    margin-top: 12px;
+  }
+  
+  .rpa-right-container { 
+    width: 100%; 
+    height: auto; 
+    display: flex;
+    flex-direction: row; 
+    gap: 12px; 
+    order: 1;
+  }
+  
+  .rpa-right-top-box { 
+    flex: 1;
+    height: auto; 
+    aspect-ratio: 2.2;
+    background-size: 100% 100%; 
+  }
+  
+  .rpa-right-bottom-box { 
+    display: flex;
+    flex: 1;
+    height: auto;
+    aspect-ratio: 443/154;
+    background-size: 100% 100%;
+  }
+  
+  .rpa-bottom-text { font-size: clamp(9px, 3vw, 14px); margin-top: 8px; }
+  
+  .rpa-left-box { 
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 725/431; 
+    background-size: 100% 100%; 
+    order: 2;
+    margin-top: 0;
+  }
+  
+  .rpa-left-item { align-items: center; }
+  .rpa-left-item:first-child { top: 6%; left: 24%; }
+  .rpa-left-item:last-child { top: 6%; right: 25%; }
+  .rpa-left-label { font-size: clamp(8px, 2.5vw, 12px); opacity: 0.6; }
+  .rpa-left-value { font-size: clamp(24px, 7vw, 36px); margin-top: 0; }
+}

@@ -1,0 +1,358 @@
+.hero-section {
+  max-width: 1200px;
+  width: 100%;
+  height: 675px;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-gif {
+  width: 100%;
+  max-width: 1200px;
+  height: 675px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.hero-content.show-content {
+  opacity: 1;
+}
+
+.hero-subtitle {
+  color: #ffffff;
+  font-family: "Alibaba PuHuiTi", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.title-main {
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.84px;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.title-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.info-top {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.year {
+  width: 56px;
+  height: 30px;
+  color: #ffffff;
+  font-family: "Alibaba PuHuiTi", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.desc-en {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  color: #ffffff;
+  font-family: "Alibaba PuHuiTi", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.desc-en span {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.desc-cn {
+  align-self: stretch;
+  color: #ffffff;
+  font-family: "FZRuiShuiYunS", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-action {
+  width: 345px;
+  height: 44px;
+  border-radius: 44px;
+  background: #00000066;
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
+  position: relative;
+}
+
+.hero-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 44px;
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+  margin: 12px 0 12px 16px;
+}
+
+.btn-text {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: normal;
+  white-space: nowrap;
+  margin-top: -2px;
+}
+
+.hero-btn-demo {
+  width: 114px;
+  height: 38px;
+  background: linear-gradient(90deg, #0222F9 1.11%, #023DD9 61.11%, #8764FF 111.11%);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-btn-demo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.hero-btn-demo:hover::before {
+  left: 100%;
+}
+
+.hero-btn-demo:hover {
+  opacity: 0.9;
+}
+
+.hero-demo-text {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  margin-left: 12px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.hero-demo-arrow {
+  width: auto;
+  height: auto;
+  display: block;
+  max-height: 16px;
+  margin: 0;
+}
+
+
+
+
+.section-gradient-bar {
+  width: 100%;
+  max-width: 1200px;
+  height: 80px;
+  background: linear-gradient(180deg, #00000000 0%, #000002 79.33%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hero-section { 
+    width: 100%; 
+    height: 400px; 
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important; 
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  .hero-gif { width: 100%; height: 100%; object-fit: cover; }
+  
+  .hero-subtitle { display: none; }
+  
+  .hero-content { 
+    gap: 30px; 
+    width: 100%; 
+    top: 55%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    align-items: center;
+  }
+
+  .hero-title { 
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    gap: 12px; 
+    width: 100%;
+  }
+
+  .title-main { 
+    font-size: clamp(32px, 8vw, 48px); 
+    letter-spacing: 1px; 
+    line-height: 1;
+  }
+
+  .title-info { 
+    align-items: flex-start; 
+    text-align: left;
+  }
+
+  .info-top { 
+    align-items: flex-start; 
+  }
+
+  .year { display: none; }
+
+  .desc-en { 
+    align-items: flex-start; 
+    font-size: 8px;
+    line-height: 1.2;
+    opacity: 0.8;
+  }
+
+  .desc-cn { 
+    font-size: 16px; 
+    margin-top: 4px;
+    white-space: nowrap;
+  }
+
+  .hero-action { 
+    width: auto; 
+    height: auto; 
+    background: none;
+    backdrop-filter: none;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .hero-action::before { display: none; }
+
+  .action-btn { display: none; }
+
+  .hero-btn-demo { 
+    display: flex; 
+    width: 160px; 
+    height: 48px; 
+    background: linear-gradient(90deg, #0222F9 1.11%, #023DD9 61.11%, #8764FF 111.11%);
+    border-radius: 40px;
+    box-shadow: 0 4px 15px rgba(2, 34, 249, 0.3);
+  }
+
+  .hero-demo-text { 
+    font-size: 18px; 
+    margin: 0;
+  }
+
+  .hero-demo-arrow { display: none; }
+
+  .section-gradient-bar { width: 100%; height: 40px; }
+}

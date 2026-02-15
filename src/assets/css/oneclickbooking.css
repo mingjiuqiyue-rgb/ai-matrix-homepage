@@ -1,0 +1,57 @@
+.oneclick-booking {
+  width: 1200px;
+  height: 712px;
+  margin: 0 auto;
+  background-image: url('../images/OneclickBooking/Slice\ 5@2x.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.booking-header { position: absolute; top: 104px; left: 64px; display: flex; gap: 88px; }
+.header-text { color: #ffffff99; font-family: "PingFang SC"; font-size: 16px; font-style: normal; font-weight: 900; line-height: normal; }
+.booking-title { position: absolute; top: 172px; left: 64px; color: #ffffff; font-family: "PingFang SC"; font-size: 40px; font-style: normal; font-weight: 900; line-height: normal; margin: 0; }
+
+.booking-demo-btn {
+  position: absolute; top: 280px; left: 64px;
+  display: flex; width: 214px; height: 82px; align-items: center; justify-content: center; gap: 6px;
+  border-radius: 40px; background: linear-gradient(90deg, #02229F 11.11%, #023DD9 61.11%, #7B61FF 111.11%);
+  border: none; cursor: pointer; flex-shrink: 0; box-sizing: border-box;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.booking-demo-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+.booking-demo-text { color: #ffffff; font-family: "PingFang SC"; font-size: 28px; font-style: normal; font-weight: 900; line-height: normal; margin-left: 12px; }
+.booking-demo-arrow { width: 32px; height: 32px; display: block; }
+.booking-icons { position: absolute; top: 588px; left: 64px; display: flex; gap: 28px; }
+.booking-icon { width: 62px; height: 62px; cursor: pointer; transition: transform 0.2s; }
+.booking-icon:hover { transform: scale(1.1); }
+
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+.modal-content { position: relative; max-width: 90%; max-height: 90%; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.modal-image { max-width: 100%; max-height: 80vh; object-fit: contain; }
+.modal-close-icon { width: 40px; height: 40px; position: absolute; top: 140px; right: 40px; cursor: pointer; transition: opacity 0.3s ease; }
+.modal-close-icon:hover { opacity: 0.8; }
+
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .oneclick-booking { width: 100%; height: auto; min-height: auto; background-image: url('../images/OneclickBooking/Slice 5@2x.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 50px 20px 80px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .booking-header { display: none; }
+  .header-text { font-size: 14px; }
+  .booking-title { position: relative; top: auto; left: auto; font-size: 22px; margin-top: 16px; width: 100%; }
+  .booking-demo-btn { display: none; }
+  .booking-demo-text { font-size: 18px; }
+  .booking-demo-arrow { width: 22px; height: 22px; }
+  .booking-icons { position: relative; top: auto; left: auto; margin-top: 32px; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .booking-icon { width: 44px; height: 44px; }
+}

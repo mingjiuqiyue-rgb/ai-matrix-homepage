@@ -1,0 +1,342 @@
+.customer-success {
+  width: 1200px;
+  height: 636px;
+  margin: 160px auto 0;
+  text-align: center;
+  position: relative;
+}
+
+.success-badge {
+  display: inline-flex;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.badge-text {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.success-title {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 30px 0 0;
+}
+
+.success-image {
+  max-width: 481px;
+  width: 100%;
+  height: auto;
+  margin-top: 22px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.success-content {
+  width: 1200px;
+  height: 454px;
+  position: relative;
+  overflow: hidden;
+  bottom: 80px;
+}
+
+.cases-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  height: 454px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 1200px;
+  position: relative;
+}
+
+.case-box {
+  position: relative;
+  height: 454px;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.case-box.case-active {
+  width: 783px;
+  height: 454px;
+  z-index: 10;
+  order: 2;
+}
+
+.case-box.case-small {
+  width: 200px;
+  height: 418px;
+  opacity: 0.9;
+  z-index: 1;
+  margin-top: 36px;
+  flex-shrink: 0;
+}
+
+.case-box.case-small:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.case-box:not(.case-visible) { display: none; }
+
+.case-software.case-visible { order: calc(1 + var(--active-case) * 0); }
+.case-beauty.case-visible { order: calc(2 + var(--active-case) * 0); }
+.case-food.case-visible { order: calc(3 + var(--active-case) * 0); }
+.case-jewelry.case-visible { order: calc(4 + var(--active-case) * 0); }
+.case-apparel.case-visible { order: calc(5 + var(--active-case) * 0); }
+
+.case-software.case-active { background-image: url('../images/CustomerSuccess/Slice 22@2x.png'); background-size: 783px 448px; background-position: center bottom; }
+.case-beauty.case-active { background-image: url('../images/CustomerSuccess/Slice 21@2x.png'); background-size: 783px 448px; background-position: center bottom; }
+.case-food.case-active { background-image: url('../images/CustomerSuccess/Slice 23@2x.png'); background-size: 783px 448px; background-position: center bottom; }
+.case-jewelry.case-active { background-image: url('../images/CustomerSuccess/Slice 25@2x.png'); background-size: 783px 448px; background-position: center bottom; }
+.case-apparel.case-active { background-image: url('../images/CustomerSuccess/Slice 26@2x.png'); background-size: 783px 448px; background-position: center bottom; }
+.case-box.case-small { background-image: url('../images/CustomerSuccess/Slice 18@2x.png'); background-size: 200px 418px; background-position: center; }
+
+.case-header { position: absolute; top: 84px; left: 48px; display: flex; align-items: center; gap: 8px; }
+.industry-icon { width: 32px; height: 32px; }
+.industry-text { color: #ffffff; font-family: "PingFang SC"; font-size: 24px; font-weight: 900; }
+.case-name { position: absolute; top: 122px; left: 48px; color: #ffffff; font-family: "PingFang SC"; font-size: 36px; font-weight: 900; margin: 0; padding: 0; }
+.case-position { position: absolute; top: 166px; left: 48px; color: #ffffff; font-family: "PingFang SC"; font-size: 24px; font-weight: 500; margin: 0; padding: 0; }
+.case-person-photo { position: absolute; right: 78px; width: 271px; height: 265px; object-fit: cover; }
+.case-description { width: 440px; position: absolute; bottom: 74px; right: 56px; color: #6a6f77; font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 20px; font-weight: 500; }
+.case-beauty .case-description { right: 60px; bottom: 74px; }
+.case-food .case-description { right: 40px; bottom: 74px; }
+.case-apparel .case-description { right: 42px; bottom: 89px; }
+.case-data { position: absolute; bottom: 0; left: 0; }
+.data-title { position: absolute; bottom: 146px; left: 64px; color: #000000; font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; font-weight: 900; white-space: nowrap; }
+.data-content { position: relative; }
+.data-icon { width: 71px; height: 72px; position: absolute; left: 64px; bottom: 68px; }
+.data-text { color: #000000; font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; font-weight: 900; position: absolute; left: 115px; bottom: 82px; white-space: nowrap; }
+.data-number { color: #000000; font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 56px; font-weight: 900; position: absolute; bottom: 68px; }
+.data-content .data-number { left: 151px; }
+.data-percent { color: #000000; font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 32px; font-weight: 900; position: absolute; bottom: 75px; }
+.data-content .data-percent { left: 235px; }
+.case2-number { left: 64px !important; }
+.case2-percent { left: 164px !important; }
+.case5-number { left: 64px !important; }
+.case5-percent { left: 132px !important; }
+.case-food .data-icon { left: 40px; }
+.rotated-icon { transform: rotate(180deg); }
+
+.case-small-content { width: 200px; height: 418px; display: flex; flex-direction: column; align-items: center; }
+.small-person-photo { width: 168px; height: 184px; object-fit: cover; margin-top: 45px; }
+.small-name { color: #000000; font-family: "PingFang SC"; font-size: 24px; font-weight: 900; text-align: center; margin-top: 16px; width: 100%; }
+.small-position { color: #000000cc; font-family: "PingFang SC"; font-size: 20px; font-weight: 500; text-align: center; margin-top: 4px; width: 100%; }
+.small-industry { color: #00000099; font-family: "PingFang SC"; font-size: 16px; font-weight: 500; text-align: center; margin-top: 4px; width: 100%; }
+
+.nav-arrows { display: flex; justify-content: center; gap: 32px; position: relative; width: 100%; z-index: 100; }
+.nav-arrow { width: 56px; height: 56px; cursor: pointer; transition: opacity 0.3s ease; }
+.nav-arrow:hover { opacity: 0.8; }
+.case-box:not(.case-active) .case-content { display: none; }
+.case-box.case-active .case-small-content { display: none; }
+
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .customer-success { width: 100%; height: auto; margin: 60px auto 0; padding: 0 16px; box-sizing: border-box; }
+  .success-title { font-size: 24px; }
+  .success-content { width: 100%; height: auto; bottom: 0; overflow: visible; }
+  .cases-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Active case - flow layout, no background image clipping */
+  .case-box.case-active {
+    grid-column: span 2;
+    order: -1; /* Ensure active case is always at the top */
+    width: 100%;
+    height: auto !important;
+    min-height: auto;
+    background-size: cover !important;
+    background-position: center !important;
+    overflow: visible !important;
+    border-radius: 12px;
+    padding: 24px 16px 16px;
+    box-sizing: border-box;
+  }
+  
+  .case-box.case-active .case-content {
+    display: block;
+    padding: 0;
+    position: relative;
+  }
+
+  .case-header { position: relative !important; top: auto !important; left: auto !important; margin-bottom: 12px; }
+  .industry-icon { width: 24px; height: 24px; }
+  .industry-text { font-size: 18px; }
+  .case-name { position: relative !important; top: auto !important; left: auto !important; font-size: 32px; margin-top: 8px; }
+  .case-position { position: relative !important; top: auto !important; left: auto !important; font-size: 18px; margin-top: 4px; color: #ffffff !important; opacity: 0.9; }
+  
+  .case-person-photo { 
+    position: absolute !important; 
+    right: 0 !important; 
+    top: -10px !important;
+    width: 180px !important; 
+    height: 180px !important; 
+    object-fit: contain !important; 
+    z-index: 2; 
+  }
+
+  .active-info-box {
+    margin-top: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    left: -19px;
+    top: -4px;
+    width: 102%;
+  }
+
+  .case-data { 
+    position: relative !important; 
+    left: auto !important; 
+    bottom: auto !important; 
+    flex: 0 0 auto;
+    width: auto !important;
+    border-right: 1px solid #eee;
+    padding-right: 16px;
+  }
+
+  .data-title { position: relative !important; bottom: auto !important; left: auto !important; font-size: 12px; color: #333; margin-bottom: 8px; }
+  .data-content { 
+    display: flex; 
+    align-items: center; 
+    gap: 4px; 
+    margin-top: 0; 
+    position: relative !important; 
+    height: auto !important;
+    /* 可在这里调整整体大小，例如使用 transform: scale(0.9); 或设置具体的 width/height */
+    transform: scale(0.8);
+  }
+  .data-icon { position: relative !important; left: auto !important; bottom: auto !important; width: 28px; height: 28px; }
+  .data-text { position: relative !important; left: auto !important; bottom: auto !important; font-size: 14px; color: #333; }
+  .data-number { position: relative !important; bottom: auto !important; left: auto !important; font-size: 32px; color: #000; }
+  .data-percent { position: relative !important; bottom: auto !important; left: auto !important; font-size: 18px; color: #000; }
+  
+  .case-description {
+    position: relative !important;
+    width: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    font-size: 9px;
+    line-height: 1.5;
+    margin-top: 0;
+    color: #6a6f77;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .case2-number, .case2-percent, .case5-number, .case5-percent { left: auto !important; }
+  .case-food .data-icon { left: auto; }
+
+  /* Small case cards - Grid style */
+  .case-box.case-small { 
+    width: 100%; 
+    height: auto; 
+    min-height: 240px; 
+    margin-top: 0; 
+    background: #f8f9fa !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-box.case-small .case-small-content { 
+    flex-direction: column; 
+    width: 100%; 
+    height: 100%;
+    align-items: stretch; 
+    padding: 0; 
+    box-sizing: border-box; 
+    gap: 0; 
+  }
+
+  .small-person-photo { 
+    width: 100%; 
+    height: 160px; 
+    margin-top: 0; 
+    border-radius: 12px 12px 0 0; 
+    object-fit: cover;
+    flex-shrink: 0; 
+  }
+
+  .small-info-container {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 0 0 12px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .small-name { 
+    font-size: 20px; 
+    color: #000;
+    font-weight: 900;
+    text-align: left; 
+    margin-top: 0; 
+    width: 100%; 
+  }
+
+  .small-position-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  .small-position { 
+    font-size: 15px; 
+    color: #333;
+    font-weight: 500;
+    text-align: left; 
+    margin-top: 0; 
+    width: auto; 
+  }
+
+  .small-industry { 
+    font-size: 13px; 
+    color: #999;
+    font-weight: 400;
+    text-align: left; 
+    margin-top: 0; 
+    margin-left: 0; 
+    width: auto; 
+  }
+
+  .nav-arrow { width: 40px; height: 40px; }
+  .nav-arrows { gap: 24px; margin-top: 16px; }
+}

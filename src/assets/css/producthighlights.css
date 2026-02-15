@@ -1,0 +1,489 @@
+.product-highlights {
+  max-width: 1000px;
+  width: 95%;
+  height: 708px;
+  margin: 160px auto 0;
+  text-align: center;
+  position: relative;
+}
+
+.highlights-badge {
+  display: inline-flex;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.badge-text {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.highlights-title {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 30px 0 0;
+}
+
+.highlights-image {
+  max-width: 481px;
+  width: 100%;
+  height: auto;
+  margin-top: 22px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlights-content {
+  display: flex;
+  gap: 13px;
+  width: 100%;
+  max-width: 1000px;
+  height: 508px;
+  margin-top: 22px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  bottom: 90px;
+}
+
+.feature-box {
+  position: relative;
+  height: 508px;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+/* 大盒子样式 */
+.feature-box.feature-active {
+  width: 531px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+/* 小盒子样式 */
+.feature-box.feature-small {
+  width: 140px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.feature-box.feature-small:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+/* 各功能大盒子的背景图 */
+.feature-box.feature-active.feature-data-collection,
+.feature-box.feature-active.feature-browser,
+.feature-box.feature-active.feature-rpa,
+.feature-box.feature-active.feature-matrix {
+  background-image: url('../images/ProductHighlights/Slice\ 11@2x.png');
+}
+
+/* 小盒子的背景图 */
+.feature-box.feature-small.feature-data-collection {
+  background-image: url('../images/ProductHighlights/Slice\ 32@2x.png');
+}
+
+.feature-box.feature-small.feature-browser {
+  background-image: url('../images/ProductHighlights/Slice\ 12@2x.png');
+}
+
+.feature-box.feature-small.feature-rpa {
+  background-image: url('../images/ProductHighlights/Slice\ 12@2x\ \(1\).png');
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.feature-box.feature-small.feature-matrix {
+  background-image: url('../images/ProductHighlights/Slice\ 12@2x\ \(2\).png');
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 大盒子内部样式 */
+.feature-box.feature-active .feature-title {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  height: 40px;
+  margin: 56px 0 0 40px;
+  white-space: nowrap;
+}
+
+.feature-box.feature-active .feature-subtitle {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 32px 0 0 40px;
+  white-space: nowrap;
+}
+
+.feature-box.feature-active .feature-desc {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 8px 0 0 40px;
+  white-space: nowrap;
+}
+
+.feature-box.feature-active .feature-btn {
+  position: absolute;
+  width: 145px;
+  height: 47px;
+  background: linear-gradient(90deg, #5794F7 11.11%, #7E8AF7 61.11%, #A080F7 111.11%);
+  border-radius: 4px;
+  border: none;
+  filter: drop-shadow(4px 4px 40px rgba(21, 54, 165, 0.8));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 197px;
+  left: 40px;
+  z-index: 2;
+  padding: 0;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.feature-box.feature-active .feature-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}
+
+.feature-box.feature-active .btn-text {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.feature-box.feature-active .feature-image {
+  position: absolute;
+  width: 100%;
+  max-width: 605px;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+}
+
+/* 小盒子内部样式 */
+.feature-box.feature-small .feature-small-title {
+  color: #ffffff;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 62px 0 0 16px;
+}
+
+.feature-box.feature-small .feature-small-subtitle {
+  color: #ffffffe6;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  margin: 40px 0 0 16px;
+}
+
+.feature-box.feature-small .feature-small-desc {
+  color: #ffffffe6;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  margin: 8px 0 0 16px;
+}
+
+.feature-box.feature-small .feature-small-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: 206px;
+  left: 16px;
+  object-fit: contain;
+}
+
+/* 布局顺序调整 */
+.highlights-content[data-active="data-collection"] .feature-box:nth-child(1) { order: 1; }
+.highlights-content[data-active="data-collection"] .feature-box:nth-child(2) { order: 2; }
+.highlights-content[data-active="data-collection"] .feature-box:nth-child(3) { order: 3; }
+.highlights-content[data-active="data-collection"] .feature-box:nth-child(4) { order: 4; }
+
+.highlights-content[data-active="browser"] .feature-box:nth-child(1) { order: 2; }
+.highlights-content[data-active="browser"] .feature-box:nth-child(2) { order: 1; }
+.highlights-content[data-active="browser"] .feature-box:nth-child(3) { order: 3; }
+.highlights-content[data-active="browser"] .feature-box:nth-child(4) { order: 4; }
+
+.highlights-content[data-active="rpa"] .feature-box:nth-child(1) { order: 2; }
+.highlights-content[data-active="rpa"] .feature-box:nth-child(2) { order: 3; }
+.highlights-content[data-active="rpa"] .feature-box:nth-child(3) { order: 1; }
+.highlights-content[data-active="rpa"] .feature-box:nth-child(4) { order: 4; }
+
+.highlights-content[data-active="matrix"] .feature-box:nth-child(1) { order: 2; }
+.highlights-content[data-active="matrix"] .feature-box:nth-child(2) { order: 3; }
+.highlights-content[data-active="matrix"] .feature-box:nth-child(3) { order: 4; }
+.highlights-content[data-active="matrix"] .feature-box:nth-child(4) { order: 1; }
+
+.highlights-carousel {
+  display: none;
+  width: 100%;
+  margin-top: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  --slide-width: 100%;
+}
+
+.carousel-slide {
+  min-width: var(--slide-width);
+  box-sizing: border-box;
+}
+
+.carousel-card {
+  background-image: url('../images/ProductHighlights/Slice 11@2x.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 24px 20px 16px;
+  text-align: left;
+  min-height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-title {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.carousel-subtitle {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  margin: 10px 0 0;
+}
+
+.carousel-desc {
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  margin-top: 6px;
+}
+
+.carousel-desc p {
+  margin: 6px 0 0;
+}
+
+.carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, #5794F7 11.11%, #7E8AF7 61.11%, #A080F7 111.11%);
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.carousel-btn:hover {
+  opacity: 0.9;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+  display: block;
+}
+
+.carousel-preview {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  filter: blur(3px);
+  opacity: 0.35;
+  display: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.carousel-preview.left {
+  left: -22px;
+  opacity: 0.3;
+}
+
+.carousel-preview.right {
+  right: -26px;
+  opacity: 0.2;
+}
+
+.carousel-track {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  width: 18px;
+  border-radius: 8px;
+  background: #FFFFFF;
+}
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 1024px) {
+  .product-highlights { width: 100%; height: auto; margin: 60px auto 0; padding: 0 16px; box-sizing: border-box; }
+  .highlights-title { font-size: 24px; }
+  .highlights-content { display: none; }
+  .highlights-carousel { display: block; width: 100%; margin: 22px auto 0; overflow: hidden; position: relative; }
+  .carousel-track {
+    --slide-width: 78%;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+  .carousel-preview { display: none !important; }
+  .carousel-arrow { display: flex; width: 32px; height: 32px; border: none; background: transparent; padding: 0; align-items: center; justify-content: center; cursor: pointer; z-index: 2; }
+  .carousel-arrow.left { left: 10px; }
+  .carousel-arrow.right { right: 10px; }
+  .carousel-slide { padding: 0 8px; box-sizing: border-box; }
+  .carousel-card { padding: 24px 20px 16px; height: 350px; margin: 0 auto; box-sizing: border-box; width: 100%; }
+  .carousel-image { width: 100%; height: auto; margin-top: 12px; display: block; }
+  .carousel-title {
+    color: #FFFFFF;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+  }
+  .carousel-subtitle {
+    color: #FFFFFF;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    margin: 10px 0 0;
+  }
+  .carousel-desc {
+    color: #FFFFFF;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    margin-top: 6px;
+  }
+  .carousel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 16px;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #5794F7 11.11%, #7E8AF7 61.11%, #A080F7 111.11%);
+    border-radius: 6px;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .carousel-dots { display: none; }
+  .feature-box { height: auto; min-height: auto; overflow: visible; }
+  .feature-box.feature-active { width: 100%; height: auto; min-height: 360px; }
+  .feature-box.feature-small { width: 100%; height: auto; min-height: 120px; padding: 16px; box-sizing: border-box; }
+  .feature-box.feature-active .feature-title { font-size: 22px; margin: 24px 0 0 20px; white-space: normal; height: auto; }
+  .feature-box.feature-active .feature-subtitle { font-size: 15px; margin: 16px 0 0 20px; white-space: normal; }
+  .feature-box.feature-active .feature-desc { font-size: 15px; margin: 6px 0 0 20px; white-space: normal; }
+  .feature-box.feature-active .feature-btn { display: none; }
+  .feature-box.feature-active .feature-image { position: relative; left: auto; transform: none; max-width: 100%; margin-top: 16px; }
+  .feature-box.feature-small .feature-small-title { font-size: 18px; margin: 0; }
+  .feature-box.feature-small .feature-small-subtitle { font-size: 14px; margin: 6px 0 0 0; }
+  .feature-box.feature-small .feature-small-desc { font-size: 14px; margin: 4px 0 0 0; }
+  .feature-box.feature-small .feature-small-icon { position: absolute; bottom: auto; top: 50%; right: 16px; left: auto; transform: translateY(-50%); }
+}
